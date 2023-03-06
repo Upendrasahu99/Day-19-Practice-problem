@@ -5,21 +5,36 @@ import java.util.Scanner;
 public class UserRegistration {
 
     String firstName;
+    String lastName;
 
-    UserRegistration(int user){
+    UserRegistration(int user) {
         System.out.println("User " + user);
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter user first name : ");
         this.firstName = scanner.nextLine();
+        System.out.print("Enter user last name : ");
+        this.lastName = scanner.nextLine();
     }
-   public boolean validationOfFirstName(){
-        if(firstName.matches("[A-Z][a-z]{2,}")){
-            return true;
-        }else{
+
+    public void validationOfFirstName() {
+        if (firstName.matches("[A-Z][a-z]{2,}")) {
+
+        } else {
             System.out.println("Invalid data");
-         return false;
+
         }
     }
+
+    public void validationOfLastName() {
+
+        if (lastName.matches("[A-Z][a-z]{2,}")) {
+
+        } else {
+            System.out.println("Invalid data");
+
+        }
+    }
+
 
     public static void main(String[] args) {
         System.out.println("Welcome to User Registration Program");
